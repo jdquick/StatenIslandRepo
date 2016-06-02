@@ -122,8 +122,20 @@ $(document).ready(function () {
 </div>
 
 
-<div id="analysis-of-gross-square-feet-to-sales-price" class="section level2">
-<h2>Analysis of gross square feet to sales price</h2>
+<div id="analysis-of-gross-square-feet-to-sales-price" class="section level1">
+<h1>Analysis of gross square feet to sales price</h1>
+<div id="session-info" class="section level2">
+<h2>Session Info</h2>
+<p>R version 3.3.0 (2016-05-03) Platform: x86_64-w64-mingw32/x64 (64-bit) Running under: Windows &gt;= 8 x64 (build 9200)</p>
+<p>locale: [1] LC_COLLATE=English_United States.1252 LC_CTYPE=English_United States.1252<br />
+[3] LC_MONETARY=English_United States.1252 LC_NUMERIC=C<br />
+[5] LC_TIME=English_United States.1252</p>
+<p>attached base packages: [1] stats graphics grDevices utils datasets methods base</p>
+<p>loaded via a namespace (and not attached): [1] htmltools_0.3.5 tools_3.3.0 yaml_2.1.13 Rcpp_0.12.4 rmarkdown_0.9.6 [6] digest_0.6.9</p>
+</div>
+</div>
+<div id="code-process" class="section level1">
+<h1>Code process</h1>
 <p>The following code calls the Main.R script which sets environment variables, ensures packages are loaded that are needed, and then calls 3 R scripts: LoadData.R, CleanData.R, and AnalyzeData.R</p>
 <p>LoadData.R reads an Excel file for Staten Island Sales</p>
 <p>CleanData.R does the following: Cleans up sales price and makes it numeric Makes all variable names lower case Gets rid of leading digits for gross square feet and land Changes sales date to R’s date format Subsets year from the sales date into a variable Removes homes with sales prices of 0 Removes homes with sales prices that don’t seem like actual sales</p>
