@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Housing Sales Analysis for Staten Island borough\"\nauthor: \"Johnny Quick, Olufemi Adesanya, and Celia Taylor\"\ndate: \"June 1, 2016\"\noutput: html_document\n---\n\n## Analysis of gross square feet to sales price\n\n```{r mainchunk}\nmaind <- \"/Users/Johnny/OneDrive/Documents/6306/Unit3/live3repo\"\nsetwd(maind)\ngetwd()\nsource(\"Main.R\")\n```\n\nAs you can see from the plot above, there is a positive linear relation between gross square feet and sales price for housing in the Staten Island borough\n",
+    "created" : 1464443928326.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2245541785",
+    "id" : "6E3B8A1D",
+    "lastKnownWriteTime" : 1464832531,
+    "last_content_update" : 1464832531032,
+    "path" : "C:/Users/Johnny/OneDrive/Documents/6306/Unit3/live3repo/PAPER/HousingAnalysis.Rmd",
+    "project_path" : "PAPER/HousingAnalysis.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Author: Benjamin Reddy\n# Taken from pages 49-50 of O'Neil and Schutt\n\nsetwd(datad)\n\n## You need a perl interpreter to do this on Windows.\n## It's automatic in Mac\n## Since Windows, specify where perl.exe is located\nbk <- read.xls(\"rollingsales_statenisland.xls\",pattern=\"BOROUGH\", perl = \"/Strawberry/Perl/perl/bin/perl.exe\")\n\n# So, save the file as a csv and use read.csv instead\n# No need as perl is loaded on my Windows machine\n## bk <- read.csv(\"rollingsales_statenisland.csv\",skip=4,header=TRUE)\n## Check the data\n## head(bk)\n## summary(bk)\n## str(bk) # Very handy function!\n",
+    "created" : 1464832059687.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "157385169",
+    "id" : "B2ABAC2A",
+    "lastKnownWriteTime" : 1464832073,
+    "last_content_update" : 1464832073860,
+    "path" : "C:/Users/Johnny/OneDrive/Documents/6306/Unit3/live3repo/DATA/LoadData.R",
+    "project_path" : "DATA/LoadData.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

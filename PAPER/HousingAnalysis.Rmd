@@ -1,0 +1,17 @@
+---
+title: "Housing Sales Analysis for Staten Island borough"
+author: "Johnny Quick, Olufemi Adesanya, and Celia Taylor"
+date: "June 1, 2016"
+output: html_document
+---
+
+## Analysis of gross square feet to sales price
+
+```{r mainchunk}
+maind <- "/Users/Johnny/OneDrive/Documents/6306/Unit3/live3repo"
+setwd(maind)
+getwd()
+source("Main.R")
+```
+
+As you can see from the plot above, there is a positive linear relation between gross square feet and sales price for housing in the Staten Island borough

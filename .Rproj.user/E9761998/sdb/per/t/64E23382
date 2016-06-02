@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# This repository was created 5/28/2016 \n## Authors: Johnny Quick, Olufemi Adesanya, and Celia Taylor\n\nThe repository was created for MSDS 6306 project for Unit 3 Live Session.\n\nIt contains three directories: ANALYSIS, PAPER, and DATA.\n\nThe DATA directory contains data files for STATEN ISLAND housing sales. There are csv and xls versions available. CSV can be read if the user's computer is a Windows computer that doesn't have perl installed. Alternatively, the user can install perl and reference the perl exe in the read.xls function. The directory also contains R scripts for loading and cleaning the data which involves removing outliers along with formatting the data.\n\nThe ANALYSIS directory contains a R script for analyzing the relationship of housing sales for gross square feet and sales price.\n\nThe PAPER directory contains a R markdown file describing the relationship analyzed using the R script from the ANALYSIS directory.\n\nThere is a R script named Main.R in the project's root directory that initializes the variables and environment, and then it calls the other R scripts for loading, cleaning, and analyzing the data. ",
+    "created" : 1464443430406.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "996221027",
+    "id" : "64E23382",
+    "lastKnownWriteTime" : 1464456174,
+    "last_content_update" : 1464456174985,
+    "path" : "C:/Users/Johnny/OneDrive/Documents/6306/Unit3/live3repo/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}

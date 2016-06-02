@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Author: Benjamin Reddy\n# Taken from pages 49-50 of O'Neil and Schutt\n\nsetwd(datad)\n\n## clean/format the data with regular expressions\n## More on these later. For now, know that the\n## pattern \"[^[:digit:]]\" refers to members of the variable name that\n## start with digits. We use the gsub command to replace them with a blank space.\n# We create a new variable that is a \"clean' version of sale.price.\n# And sale.price.n is numeric, not a factor.\nbk$SALE.PRICE.N <- as.numeric(gsub(\"[^[:digit:]]\",\"\", bk$SALE.PRICE))\ncount(is.na(bk$SALE.PRICE.N))\n\nnames(bk) <- tolower(names(bk)) # make all variable names lower case\n## Get rid of leading digits\nbk$gross.sqft <- as.numeric(gsub(\"[^[:digit:]]\",\"\", bk$gross.square.feet))\nbk$land.sqft <- as.numeric(gsub(\"[^[:digit:]]\",\"\", bk$land.square.feet))\n\n## Change sale.date to Date forat in R\nbk$sale.date <- as.Date(bk$sale.date)\nbk$year.built <- as.numeric(as.character(bk$year.built))\n\n## do a bit of exploration to make sure there's not anything\n## weird going on with sale prices\n## attach(bk)\n## hist(sale.price.n) # Something weird here\n## hist(sale.price.n[sale.price.n>0])\n## hist(gross.sqft[sale.price.n==0])\n## detach(bk)\n\n## keep only the actual sales\n\nbk.sale <- bk[bk$sale.price.n!=0,]\n## plot(bk.sale$gross.sqft,bk.sale$sale.price.n)\n## plot(log(bk.sale$gross.sqft),log(bk.sale$sale.price.n))\n\n## for now, let's look at 1-, 2-, and 3-family homes\nbk.homes <- bk.sale[which(grepl(\"FAMILY\",bk.sale$building.class.category)),]\n## dim(bk.homes)\n## plot(log(bk.homes$gross.sqft),log(bk.homes$sale.price.n))\nsummary(bk.homes[which(bk.homes$sale.price.n<100000),])\n## remove outliers that seem like they weren't actual sales\nbk.homes$outliers <- (log(bk.homes$sale.price.n) <=5) + 0\nbk.homes <- bk.homes[which(bk.homes$outliers==0),]\n\n",
+    "created" : 1464831895309.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3984277168",
+    "id" : "7863BBC4",
+    "lastKnownWriteTime" : 1464831972,
+    "last_content_update" : 1464831972015,
+    "path" : "C:/Users/Johnny/OneDrive/Documents/6306/Unit3/live3repo/DATA/CleanData.R",
+    "project_path" : "DATA/CleanData.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
