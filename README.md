@@ -1,4 +1,4 @@
-# This repository was created 5/28/2016 
+# This repository was created 6/1/2016 
 ## Authors: Johnny Quick, Olufemi Adesanya, and Celia Taylor
 
 The repository was created for MSDS 6306 project for Unit 3 Live Session.
