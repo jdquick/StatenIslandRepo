@@ -8,7 +8,7 @@ require(gdata)
 require(plyr) #Added by Monnie McGee
 
 ## Set directory variables
-maind <- "/Users/Johnny/OneDrive/Documents/6306/Unit3/live3repo"
+maind <- "/Users/Johnny/OneDrive/Documents/6306/Unit3/StatenIslandRepo"
 datad <- paste(maind, "DATA", sep = "/")
 analysisd <- paste(maind, "ANALYSIS", sep = "/")
 
@@ -21,7 +21,3 @@ source("CleanData.R")
 
 setwd(analysisd)
 source("AnalyzeData.R")
-
-## Write clean data to wd for later use in R markdown
-setwd(datad)
-write.csv(bk.homes, file = "statenisland_cleandata.csv")

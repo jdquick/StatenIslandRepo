@@ -2,15 +2,32 @@
 title: "Housing Sales Analysis for Staten Island borough"
 author: "Johnny Quick, Olufemi Adesanya, and Celia Taylor"
 date: "June 1, 2016"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
 ---
 
 ## Analysis of gross square feet to sales price
 
+The following code calls the Main.R script which sets environment variables,
+ensures packages are loaded that are needed, and then calls 3 R scripts:
+LoadData.R, CleanData.R, and AnalyzeData.R
+
+LoadData.R reads an Excel file for Staten Island Sales
+
+CleanData.R does the following:
+  Cleans up sales price and makes it numeric
+  Makes all variable names lower case
+  Gets rid of leading digits for gross square feet and land
+  Changes sales date to R's date format
+  Subsets year from the sales date into a variable
+  Removes homes with sales prices of 0
+  Removes homes with sales prices that don't seem like actual sales
+  
+AnalyzeData.R does a plot of gross square feet related to sales price
 ```{r mainchunk}
-maind <- "/Users/Johnny/OneDrive/Documents/6306/Unit3/live3repo"
+maind <- "/Users/Johnny/OneDrive/Documents/6306/Unit3/StatenIslandRepo"
 setwd(maind)
-getwd()
 source("Main.R")
 ```
 
