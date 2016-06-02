@@ -23,22 +23,22 @@ bk$year.built <- as.numeric(as.character(bk$year.built))
 
 ## do a bit of exploration to make sure there's not anything
 ## weird going on with sale prices
-## attach(bk)
-## hist(sale.price.n) # Something weird here
-## hist(sale.price.n[sale.price.n>0])
-## hist(gross.sqft[sale.price.n==0])
-## detach(bk)
+attach(bk)
+hist(sale.price.n) # Something weird here
+hist(sale.price.n[sale.price.n>0])
+hist(gross.sqft[sale.price.n==0])
+detach(bk)
 
 ## keep only the actual sales
 
 bk.sale <- bk[bk$sale.price.n!=0,]
-## plot(bk.sale$gross.sqft,bk.sale$sale.price.n)
-## plot(log(bk.sale$gross.sqft),log(bk.sale$sale.price.n))
+plot(bk.sale$gross.sqft,bk.sale$sale.price.n)
+plot(log(bk.sale$gross.sqft),log(bk.sale$sale.price.n))
 
 ## for now, let's look at 1-, 2-, and 3-family homes
 bk.homes <- bk.sale[which(grepl("FAMILY",bk.sale$building.class.category)),]
-## dim(bk.homes)
-## plot(log(bk.homes$gross.sqft),log(bk.homes$sale.price.n))
+dim(bk.homes)
+plot(log(bk.homes$gross.sqft),log(bk.homes$sale.price.n))
 summary(bk.homes[which(bk.homes$sale.price.n<100000),])
 ## remove outliers that seem like they weren't actual sales
 bk.homes$outliers <- (log(bk.homes$sale.price.n) <=5) + 0
