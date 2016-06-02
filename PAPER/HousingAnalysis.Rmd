@@ -34,16 +34,32 @@ LoadData.R, CleanData.R, and AnalyzeData.R
 
 LoadData.R reads an Excel file for Staten Island Sales
 
-CleanData.R does the following:
-  Cleans up sales price and makes it numeric
-  Makes all variable names lower case
-  Gets rid of leading digits for gross square feet and land
-  Changes sales date to R's date format
-  Subsets year from the sales date into a variable
-  Removes homes with sales prices of 0
-  Removes homes with sales prices that don't seem like actual sales
+LoadData.R will also produce the following output:  
+  * Header of bk dataset  
+  * 5-number summary of bk dataset  
+  * Structure of bk dataset  
+
+CleanData.R does the following:  
+  * Cleans up sales price and makes it numeric  
+  * Makes all variable names lower case  
+  * Gets rid of leading digits for gross square feet and land  
+  * Changes sales date to R's date format  
+  * Subsets year from the sales date into a variable  
+  * Removes homes with sales prices of 0  
+  * Removes homes with sales prices that don't seem like actual sales  
   
-AnalyzeData.R does a plot of gross square feet related to sales price
+CleandData.R will also produce the following graphics and output:  
+  * Histogram of sale.price.n which shows us something is off here  
+  * Histogram of sale.price.n for sales prices greater than 0  
+  * Histogram of gross.sqft [sale.price.n==0]  
+  * Plot gross.sqft related to sale.price.n  
+  * Plot log(gross.sqft) related to log(sale.price.n)  
+  * Check dimensions of bk.homes dataset which is 1-, 2-, and 3- family homes  
+  * Plot log(gross.sqft) related to log(sale.price.n)  
+  * 5-number summary of bk.homes dataset for homes with sale.price.n < 100,000  
+
+AnalyzeData.R does a plot of gross square feet related to sales price  
+
 ```{r mainchunk}
 maind <- "/Users/Johnny/OneDrive/Documents/6306/Unit3/StatenIslandRepo"
 setwd(maind)
