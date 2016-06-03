@@ -100,6 +100,12 @@ source("Main.R")
 ```
 
 ```
+## The following object is masked from 'package:base':
+## 
+##     startsWith
+```
+
+```
 ## Loading required package: plyr
 ```
 
